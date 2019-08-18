@@ -37,6 +37,7 @@
 <ImageView
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:scaleType="fitXY"
     android:id="@+id/text"/>
 
             <android.support.v7.widget.Toolbar
@@ -51,11 +52,11 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <ScrollView
+    <LinearLayout
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        android:layout_marginTop="@dimen/detail_backdrop_height">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -89,7 +90,7 @@
                 />
 
         </LinearLayout>
-    </ScrollView>
+    </LinearLayout>
 
 
     <android.support.design.widget.FloatingActionButton
@@ -112,5 +113,17 @@
         android:src="@drawable/test"
         app:layout_anchor="@+id/scrollView2"
         app:layout_anchorGravity="right|bottom" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:id="@+id/fab2"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:clickable="true"
+        android:tooltipText="Take a test"
+        android:visibility="gone"
+        android:src="@drawable/update"
+        app:layout_anchor="@+id/scrollView2"
+        app:layout_anchorGravity="left|bottom" />
 
 </android.support.design.widget.CoordinatorLayout>

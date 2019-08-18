@@ -1,6 +1,7 @@
 package com.projectwork.adp.adpfoot;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.annotation.NonNull;
@@ -19,6 +20,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -26,6 +29,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -34,6 +38,7 @@ public class MainActivity extends AppCompatActivity
     private com.tuyenmonkey.mkloader.MKLoader mProgress;
     private LawsAdapter mAdapter;
     private ArrayList<Laws_Database> mData;
+    private NavigationView navigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +54,7 @@ public class MainActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         mfirebaseDatabase = FirebaseDatabase.getInstance();
         mref = mfirebaseDatabase.getReference();
@@ -87,6 +92,37 @@ public class MainActivity extends AppCompatActivity
                         });
             }
         }.start();
+
+
+     menu_inflate();
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        menu_inflate();
+    }
+
+    private void menu_inflate() {
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user!=null){
+            navigationView.getMenu().clear();
+            navigationView.inflateMenu(R.menu.activity_main_drawer);
+
+        }else   {
+            navigationView.getMenu().clear();
+            navigationView.inflateMenu(R.menu.activity_user_drawer);
+        }
+
+    }
+    private void signOut() {
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user!=null) {
+            FirebaseAuth.getInstance().signOut();
+            super.finish();
+        }
+
     }
     private void showData(DataSnapshot dataSnapshot) {
         mData.clear();
@@ -133,8 +169,17 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.action_settings) {
             super.finish();
             return true;
-        }
+        } else if (id == R.id.login) {
 
+            FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+            if (user==null) {
+                item.setTitle("Login");
+                startActivity(new Intent(MainActivity.this, Login.class));
+            }else {
+                item.setTitle("Sign Out");
+                signOut();
+            }
+        }
         return super.onOptionsItemSelected(item);
     }
 
@@ -148,12 +193,6 @@ public class MainActivity extends AppCompatActivity
             AddLaw addLawFragment = new AddLaw();
             FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
             fragmentTransaction.replace(R.id.container, addLawFragment);
-            fragmentTransaction.addToBackStack(null);
-            fragmentTransaction.commit();
-        }else if (id == R.id.update_laws) {
-            EditLaw updateLawFragment = new EditLaw();
-            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.container, updateLawFragment);
             fragmentTransaction.addToBackStack(null);
             fragmentTransaction.commit();
         }else if (id == R.id.nav_share) {

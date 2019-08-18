@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.speech.tts.TextToSpeech;
 import android.support.design.widget.CollapsingToolbarLayout;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -20,6 +21,8 @@ import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
 import com.daimajia.slider.library.SliderTypes.TextSliderView;
 import com.daimajia.slider.library.Tricks.ViewPagerEx;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import java.util.HashMap;
 import java.util.Locale;
@@ -36,10 +39,12 @@ public class law_one extends AppCompatActivity implements BaseSliderView.OnSlide
     private String urL,sub_title;
     private String video;
     private ImageView text;
-
+private FloatingActionButton fab2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
         setContentView(R.layout.activity_intro);
 
         if (getIntent().getStringExtra("title") != null) {
@@ -51,6 +56,27 @@ public class law_one extends AppCompatActivity implements BaseSliderView.OnSlide
 
         }
 
+
+        fab2 = findViewById(R.id.fab2);
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user!=null){
+            fab2.show();
+        }else {
+            fab2.hide();
+        }
+
+fab2.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        Intent intent = new Intent(law_one.this,CHK.class);
+        intent.putExtra("title",title);
+        intent.putExtra("sub_title",sub_title);
+        intent.putExtra("video",video);
+        intent.putExtra("image",image);
+        intent.putExtra("details",details);
+        startActivity(intent);
+    }
+});
 
         text = findViewById(R.id.text);
         sliderLayout = findViewById(R.id.slider);

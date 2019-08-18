@@ -22,13 +22,6 @@
                 android:icon="@drawable/ic_menu_share"
                 android:title="Share" />
         </menu>
-    </item><item android:title="Admin">
-        <menu>
-            <item
-                android:id="@+id/add_laws"
-                android:icon="@drawable/add"
-                android:title="Add Laws" />
-        </menu>
     </item>
 
 </menu>

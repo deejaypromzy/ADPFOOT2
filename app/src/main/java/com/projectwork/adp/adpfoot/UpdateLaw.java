@@ -30,14 +30,12 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.StorageTask;
 import com.google.firebase.storage.UploadTask;
 
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.Date;
 
 import static android.app.Activity.RESULT_OK;
 
-public class AddLaw extends Fragment implements View.OnClickListener {
+public class UpdateLaw extends Fragment implements View.OnClickListener {
     private static final int PERMS_REQUEST_CODE = 213123;
     private Button btnLawImage,Submit,btn_audio;
     private EditText title,subtitle,video,details,audio;
@@ -53,7 +51,7 @@ public class AddLaw extends Fragment implements View.OnClickListener {
     private SimpleDateFormat df;
     private Date date;
 
-    public AddLaw() {
+    public UpdateLaw() {
         // Required empty public constructor
     }
 
@@ -61,9 +59,6 @@ public class AddLaw extends Fragment implements View.OnClickListener {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-
-
 
         mref= FirebaseDatabase.getInstance().getReference();
         mProgress=new ProgressDialog(getContext());

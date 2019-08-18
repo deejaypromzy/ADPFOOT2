@@ -86,30 +86,12 @@
                 <EditText
                     android:id="@+id/details"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_alignParentStart="true"
                     android:drawablePadding="10dp"
+                    android:freezesText="false"
                     android:hint="Details"
-                    android:inputType="textCapSentences|textPersonName"
                     android:maxLines="100" />
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_weight="20"
-                        android:id="@+id/audio"
-                        android:enabled="false"
-                        android:hint="Audio"
-                        android:layout_height="wrap_content" />
-                    <Button
-                        android:layout_width="match_parent"
-                        android:layout_weight="80"
-                        android:id="@+id/btn_audio"
-                        android:layout_margin="8dp"
-                        android:background="@drawable/add"
-                        android:layout_height="match_parent" />
-                </LinearLayout>
                 <Button
                     android:id="@+id/submit"
                     android:layout_width="match_parent"
