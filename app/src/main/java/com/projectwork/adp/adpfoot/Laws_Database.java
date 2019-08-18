@@ -1,6 +1,6 @@
 package com.projectwork.adp.adpfoot;
 
-class Laws_Database {
+class Laws_Database  {
     String title;
     String sub_title;
     String img;

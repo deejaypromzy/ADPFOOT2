@@ -100,7 +100,12 @@ class LawsAdapter extends RecyclerView.Adapter<LawsAdapter.ChildViewHolder> {
         @Override
         public void onClick(View v) {
             Intent intent = new Intent(mContext,law_one.class);
-            //intent.putString
+            intent.putExtra("title",mCurrentChild.getTitle());
+            intent.putExtra("sub_title",mCurrentChild.getSub_title());
+            intent.putExtra("audio",mCurrentChild.getAudio());
+            intent.putExtra("video",mCurrentChild.getVideo());
+            intent.putExtra("image",mCurrentChild.getImg());
+            intent.putExtra("details",mCurrentChild.getDetail());
             mContext.startActivity(intent);
 
         }

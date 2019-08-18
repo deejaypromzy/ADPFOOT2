@@ -34,7 +34,10 @@
                 android:layout_height="match_parent"
                 android:fitsSystemWindows="true"                />
 
-
+<ImageView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/text"/>
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"
@@ -49,55 +52,65 @@
     </android.support.design.widget.AppBarLayout>
 
     <ScrollView
-        android:layout_marginBottom="200dp"
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:orientation="vertical"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
             <LinearLayout
-                android:layout_width="wrap_content"
                 android:id="@+id/play"
-                android:tag="one"
-                android:layout_height="30dp">
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:tag="one">
+
                 <Button
-                    android:layout_width="70dp"
                     style="@style/Base.Widget.AppCompat.Button.Borderless.Colored"
-                    android:background="@drawable/play"
-                    android:layout_height="30dp" />
+                    android:layout_width="70dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/play" />
+
                 <TextView
                     android:id="@+id/texttoplay"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center_vertical"
-                    android:text="Play Audio"/>
+                    android:text="Play Audio" />
             </LinearLayout>
+
             <TextView
                 android:id="@+id/recyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@string/intro_details"
-                tools:layout_editor_absoluteY="256dp" />
+                />
 
         </LinearLayout>
     </ScrollView>
-
-
 
 
     <android.support.design.widget.FloatingActionButton
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         app:layout_anchor="@id/appbar"
+        android:onClick="youtube"
         app:layout_anchorGravity="bottom|right|end"
         android:src="@drawable/play"
-        android:onClick="youtube"
         android:layout_margin="@dimen/fab_margin"
         android:clickable="true"/>
 
-
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        android:clickable="true"
+        android:tooltipText="Take a test"
+        android:onClick="test"
+        android:src="@drawable/test"
+        app:layout_anchor="@+id/scrollView2"
+        app:layout_anchorGravity="right|bottom" />
 
 </android.support.design.widget.CoordinatorLayout>

@@ -8,10 +8,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Priority;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.daimajia.slider.library.Animations.DescriptionAnimation;
 import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.BaseSliderView;
@@ -26,17 +29,39 @@ public class law_one extends AppCompatActivity implements BaseSliderView.OnSlide
     SliderLayout sliderLayout ;
     HashMap<String, Integer> HashMapForLocalRes ;
     private  String key;
-    private TextView texttoplay;
+    private TextView texttoplay,tv_details;
     private TextToSpeech tts;
     LinearLayout btnSpeak;
+    private String title,image,details;
+    private String urL,sub_title;
+    private String video;
+    private ImageView text;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-               setContentView(R.layout.activity_intro);
+        setContentView(R.layout.activity_intro);
+
+        if (getIntent().getStringExtra("title") != null) {
+            title = getIntent().getStringExtra("title");
+            sub_title = getIntent().getStringExtra("sub_title");
+            image = getIntent().getStringExtra("image");
+            video = getIntent().getStringExtra("video");
+            details = getIntent().getStringExtra("details");
+
+        }
 
 
+        text = findViewById(R.id.text);
         sliderLayout = findViewById(R.id.slider);
+
+
+        GlideApp.with(this)
+                .load(image)
+                .placeholder(R.drawable.law_bg)
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .priority(Priority.HIGH)
+                .into(text);
 
         final Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -45,25 +70,28 @@ public class law_one extends AppCompatActivity implements BaseSliderView.OnSlide
         CollapsingToolbarLayout collapsingToolbar =
                 findViewById(R.id.collapsing_toolbar);
 
-                collapsingToolbar.setTitle("Introduction");
+        collapsingToolbar.setTitle(title);
 
 
-      //  loadBackdrop();
+        // loadBackdrop();
         //Call this method to add images from local drawable folder .
-        AddImageUrlFormLocalRes();
-        for(String name : HashMapForLocalRes.keySet()){
 
-            TextSliderView textSliderView = new TextSliderView(law_one.this);
-            textSliderView
-                    .description(name)
-                    .image(HashMapForLocalRes.get(name))
-                    .setScaleType(BaseSliderView.ScaleType.Fit)
-                    .setOnSliderClickListener(this);
-            textSliderView.bundle(new Bundle());
-            textSliderView.getBundle()
-                    .putString("extra",name);
-            sliderLayout.addSlider(textSliderView);
-        }
+//        HashMap<String,Integer> file_maps = new HashMap<String, Integer>();
+//        file_maps.put("1",R.drawable.law_bg);
+//        file_maps.put("2",R.drawable.laweighta);
+//
+//        for(String name : file_maps.keySet()){
+//            TextSliderView textSliderView = new TextSliderView(this);
+//            textSliderView
+//                    .description(title)
+//                    .image(image)
+//                    .setScaleType(BaseSliderView.ScaleType.Fit)
+//                    .setOnSliderClickListener(this);
+//            textSliderView.bundle(new Bundle());
+//            textSliderView.getBundle()
+//                    .putString("extra",title);
+//            sliderLayout.addSlider(textSliderView);
+//    }
 
 
         sliderLayout.setPresetTransformer(SliderLayout.Transformer.DepthPage);
@@ -71,7 +99,11 @@ public class law_one extends AppCompatActivity implements BaseSliderView.OnSlide
         sliderLayout.setCustomAnimation(new DescriptionAnimation());
         sliderLayout.setDuration(100);
         sliderLayout.addOnPageChangeListener(law_one.this);
+
+
+
         texttoplay=findViewById(R.id.recyclerView);
+        texttoplay.setText(details);
         tts = new TextToSpeech(this, this);
         // Refer 'Speak' button
         btnSpeak = (LinearLayout) findViewById(R.id.play);
@@ -137,228 +169,12 @@ public class law_one extends AppCompatActivity implements BaseSliderView.OnSlide
     public void onPointerCaptureChanged(boolean hasCapture) {
 
     }
-    public void AddImageUrlFormLocalRes(){
 
-        HashMapForLocalRes = new HashMap<String, Integer>();
 
-        key = getIntent().getStringExtra("key");
-        if (key==null){
-            key="one";
-        }
-
-        switch (key){
-            case "intro":
-                HashMapForLocalRes.put("1", R.drawable.bg);
-                HashMapForLocalRes.put("2", R.drawable.law_bg);
-                break;
-            case "one":
-                HashMapForLocalRes.put("8", R.drawable.lawoneh);
-                HashMapForLocalRes.put("7", R.drawable.lawoneg);
-                HashMapForLocalRes.put("6", R.drawable.lawonef);
-                HashMapForLocalRes.put("5", R.drawable.lawonee);
-                HashMapForLocalRes.put("4", R.drawable.lawoned);
-                HashMapForLocalRes.put("3", R.drawable.lawonec);
-                HashMapForLocalRes.put("2", R.drawable.lawoneb);
-                HashMapForLocalRes.put("1", R.drawable.lawonea);
-
-                break;
-            case "two":
-                HashMapForLocalRes.put("4", R.drawable.lawtwod);
-                HashMapForLocalRes.put("3", R.drawable.lawtwoc);
-                HashMapForLocalRes.put("2", R.drawable.lawtwob);
-                HashMapForLocalRes.put("1", R.drawable.lawtwoa);
-                break;
-            case "three":
-                HashMapForLocalRes.put("15", R.drawable.lawthreeo);
-                HashMapForLocalRes.put("14", R.drawable.lawthreen);
-                HashMapForLocalRes.put("13", R.drawable.lawthreem);
-                HashMapForLocalRes.put("12", R.drawable.lawthreel);
-                HashMapForLocalRes.put("11", R.drawable.lawthreek);
-                HashMapForLocalRes.put("10", R.drawable.lawthreej);
-                HashMapForLocalRes.put("9", R.drawable.lawthreei);
-                HashMapForLocalRes.put("8", R.drawable.lawthreeh);
-                HashMapForLocalRes.put("7", R.drawable.lawthreeg);
-                HashMapForLocalRes.put("6", R.drawable.lawthreef);
-                HashMapForLocalRes.put("5", R.drawable.lawthreee);
-                HashMapForLocalRes.put("4", R.drawable.lawthreed);
-                HashMapForLocalRes.put("3", R.drawable.lawthreec);
-                HashMapForLocalRes.put("2", R.drawable.lawthreeb);
-                HashMapForLocalRes.put("1", R.drawable.lawthreea);
-                break;
-            case "four":
-                HashMapForLocalRes.put("1", R.drawable.lawfourc);
-                HashMapForLocalRes.put("2", R.drawable.lawfourb);
-                HashMapForLocalRes.put("3", R.drawable.lawfoura);
-                HashMapForLocalRes.put("4", R.drawable.lawfourd);
-                HashMapForLocalRes.put("5", R.drawable.lawfoure);
-                HashMapForLocalRes.put("6", R.drawable.lawfourf);
-                HashMapForLocalRes.put("7", R.drawable.lawfourg);
-                HashMapForLocalRes.put("8", R.drawable.lawfourh);
-                break;
-            case "five":
-                HashMapForLocalRes.put("1", R.drawable.lawfiveg);
-                HashMapForLocalRes.put("2", R.drawable.lawfivef);
-                HashMapForLocalRes.put("3", R.drawable.lawfivee);
-                HashMapForLocalRes.put("4", R.drawable.lawfived);
-                HashMapForLocalRes.put("5", R.drawable.lawfivec);
-                HashMapForLocalRes.put("6", R.drawable.lawfiveb);
-                HashMapForLocalRes.put("7", R.drawable.lawfivea);
-
-                break;
-            case "six":
-                HashMapForLocalRes.put("1", R.drawable.lawsixaa);
-                HashMapForLocalRes.put("2", R.drawable.lawsixa);
-                HashMapForLocalRes.put("3", R.drawable.lawsixb);
-                HashMapForLocalRes.put("4", R.drawable.lawsixc);
-                HashMapForLocalRes.put("5", R.drawable.lawsixd);
-                HashMapForLocalRes.put("6", R.drawable.lawsixe);
-                HashMapForLocalRes.put("7", R.drawable.lawsixf);
-                HashMapForLocalRes.put("8", R.drawable.lawsixg);
-                HashMapForLocalRes.put("9", R.drawable.lawsixh);
-                HashMapForLocalRes.put("10", R.drawable.lawsixi);
-                HashMapForLocalRes.put("11", R.drawable.lawsixj);
-                HashMapForLocalRes.put("12", R.drawable.lawsixj);
-                HashMapForLocalRes.put("13", R.drawable.lawsixk);
-
-                break;
-            case "seven":
-                HashMapForLocalRes.put("1", R.drawable.lawsevena);
-                HashMapForLocalRes.put("2", R.drawable.lawsevenb);
-                HashMapForLocalRes.put("3", R.drawable.lawsevenc);
-                HashMapForLocalRes.put("4", R.drawable.lawsevend);
-                HashMapForLocalRes.put("5", R.drawable.lawsevene);
-
-                break;
-            case "eight":
-                HashMapForLocalRes.put("1", R.drawable.laweighta);
-                HashMapForLocalRes.put("2", R.drawable.laweightb);
-                HashMapForLocalRes.put("3", R.drawable.laweightc);
-                HashMapForLocalRes.put("4", R.drawable.laweightd);
-                HashMapForLocalRes.put("5", R.drawable.laweighte);
-                HashMapForLocalRes.put("6", R.drawable.laweightf);
-
-                break;
-            case "nine":
-                HashMapForLocalRes.put("1", R.drawable.lawninea);
-                HashMapForLocalRes.put("2", R.drawable.lawnineb);
-                HashMapForLocalRes.put("3", R.drawable.lawninec);
-                HashMapForLocalRes.put("4", R.drawable.lawnined);
-                HashMapForLocalRes.put("5", R.drawable.lawninee);
-                HashMapForLocalRes.put("6", R.drawable.lawninef);
-                break;
-            case "ten":
-                HashMapForLocalRes.put("1", R.drawable.lawtena);
-                HashMapForLocalRes.put("2", R.drawable.lawtenb);
-                HashMapForLocalRes.put("3", R.drawable.lawtenc);
-                HashMapForLocalRes.put("4", R.drawable.lawtend);
-                break;
-            case "11":
-                HashMapForLocalRes.put("1", R.drawable.lawtena);
-                HashMapForLocalRes.put("2", R.drawable.elevena);
-                HashMapForLocalRes.put("3", R.drawable.elevenb);
-                HashMapForLocalRes.put("4", R.drawable.elevenc);
-                HashMapForLocalRes.put("5", R.drawable.elevend);
-                HashMapForLocalRes.put("6", R.drawable.elevene);
-                HashMapForLocalRes.put("7", R.drawable.elevenf);
-                HashMapForLocalRes.put("8", R.drawable.elevenh);
-                HashMapForLocalRes.put("9", R.drawable.eleveni);
-                HashMapForLocalRes.put("10", R.drawable.elevenj);
-                HashMapForLocalRes.put("11", R.drawable.elevenk);
-                HashMapForLocalRes.put("12", R.drawable.elevenl);
-                HashMapForLocalRes.put("13", R.drawable.elevenm);
-                HashMapForLocalRes.put("14", R.drawable.eleveno);
-                HashMapForLocalRes.put("15", R.drawable.eleveno);
-
-                break;
-            case "12":
-                HashMapForLocalRes.put("1", R.drawable.lawtwelvea);
-               // HashMapForLocalRes.put("2", R.drawable.lawtwelveb);
-                HashMapForLocalRes.put("3", R.drawable.lawtwelvec);
-
-                break;
-            case "13":
-                HashMapForLocalRes.put("1", R.drawable.lawthirteena);
-                HashMapForLocalRes.put("2", R.drawable.lawthirteenb);
-                HashMapForLocalRes.put("3", R.drawable.lawthirteenc);
-                HashMapForLocalRes.put("4", R.drawable.lawthirteend);
-                HashMapForLocalRes.put("5", R.drawable.lawthirteene);
-                HashMapForLocalRes.put("6", R.drawable.lawthirteenf);
-                break;
-            case "14":
-                HashMapForLocalRes.put("1", R.drawable.lawfoura);
-                HashMapForLocalRes.put("2", R.drawable.lawfourb);
-                HashMapForLocalRes.put("3", R.drawable.lawfourc);
-                HashMapForLocalRes.put("4", R.drawable.lawfourd);
-                HashMapForLocalRes.put("5", R.drawable.lawfoure);
-                HashMapForLocalRes.put("6", R.drawable.lawfourf);
-                HashMapForLocalRes.put("15", R.drawable.lawfourg);
-                HashMapForLocalRes.put("7", R.drawable.lawfourh);
-                HashMapForLocalRes.put("8", R.drawable.lawfouri);
-                HashMapForLocalRes.put("9", R.drawable.lawfourj);
-                HashMapForLocalRes.put("10", R.drawable.lawfourk);
-                HashMapForLocalRes.put("11", R.drawable.lawfourl);
-                HashMapForLocalRes.put("12", R.drawable.lawfourm);
-                HashMapForLocalRes.put("13", R.drawable.lawfourn);
-                HashMapForLocalRes.put("14", R.drawable.lawfouro);
-                break;
-            case "15":
-                HashMapForLocalRes.put("1", R.drawable.lawfifteena);
-                HashMapForLocalRes.put("2", R.drawable.lawfifteenb);
-                HashMapForLocalRes.put("3", R.drawable.lawfifteenc);
-                HashMapForLocalRes.put("4", R.drawable.lawfifteend);
-                HashMapForLocalRes.put("5", R.drawable.lawfifteene);
-                HashMapForLocalRes.put("6", R.drawable.lawfifteenf);
-                HashMapForLocalRes.put("8", R.drawable.lawfifteeng);
-                HashMapForLocalRes.put("9", R.drawable.lawfifteenh);
-                HashMapForLocalRes.put("10", R.drawable.lawfifteeni);
-                HashMapForLocalRes.put("11", R.drawable.lawfifteenj);
-                HashMapForLocalRes.put("12", R.drawable.lawfifteenk);
-                HashMapForLocalRes.put("13", R.drawable.lawfifteenl);
-                HashMapForLocalRes.put("14", R.drawable.lawfifteenm);
-                HashMapForLocalRes.put("15", R.drawable.lawfifteenn);
-
-                break;
-            case "16":
-                HashMapForLocalRes.put("1", R.drawable.lawsixteena);
-                HashMapForLocalRes.put("2", R.drawable.lawsixteenb);
-                HashMapForLocalRes.put("3", R.drawable.lawsixteenc);
-                HashMapForLocalRes.put("4", R.drawable.lawsixteend);
-                HashMapForLocalRes.put("5", R.drawable.lawsixteene);
-                HashMapForLocalRes.put("6", R.drawable.lawsixteenf);
-                HashMapForLocalRes.put("7", R.drawable.lawsixteeng);
-                HashMapForLocalRes.put("8", R.drawable.lawsixteenh);
-
-                break;
-            case "17":
-                HashMapForLocalRes.put("1", R.drawable.lawseventeena);
-                HashMapForLocalRes.put("2", R.drawable.lawseventeenb);
-                HashMapForLocalRes.put("3", R.drawable.lawseventeenc);
-                HashMapForLocalRes.put("4", R.drawable.lawseventeend);
-                HashMapForLocalRes.put("5", R.drawable.lawseventeene);
-                HashMapForLocalRes.put("6", R.drawable.lawseventeenf);
-                HashMapForLocalRes.put("7", R.drawable.lawseventeeng);
-                HashMapForLocalRes.put("8", R.drawable.lawseventeenh);
-                HashMapForLocalRes.put("9", R.drawable.lawseventeeni);
-                HashMapForLocalRes.put("10", R.drawable.lawseventeenj);
-                HashMapForLocalRes.put("11", R.drawable.lawseventeenk);
-                HashMapForLocalRes.put("12", R.drawable.lawseventeenl);
-                HashMapForLocalRes.put("13", R.drawable.lawseventeenm);
-                HashMapForLocalRes.put("14", R.drawable.lawseventeenn);
-
-                break;
-            default:
-                HashMapForLocalRes.put("Field", R.drawable.lawonea);
-                break;
-        }
-    }
 
     public void youtube(View view) {
-        key = getIntent().getStringExtra("key");
-        if (key==null){
-            key="one";
-        }
         Intent intent = new Intent(law_one.this,YoutubeVideo.class);
-        intent.putExtra("key",key);
+        intent.putExtra("key",video);
         startActivity(intent);
 
     }
