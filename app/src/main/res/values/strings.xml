@@ -1,0 +1,238 @@
+<resources>
+    <string name="app_name">ADP FOOT</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main">FIFA LAWS OF THE GAME</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="law_one_details">Field surface The field of play must be a wholly natural or,
+        if competition rules permit, a wholly artificial playing surface except where competition
+        rules permit an integrated combination of artificial and natural materials (hybrid system). The colour of artificial surfaces must be green.</string>
+    <string name="intro_details"><b>INTRODUCTION</b>\nFootball is the greatest sport on earth. It is played in every country and at many
+different levels. The Laws of the Game are the same for all football throughout
+the world from the FIFA World Cup™ Final through to a game between young
+children in a remote village.
+That the same Laws apply in every match in every confederation, country,
+town and village throughout the world is a considerable strength which must
+be preserved. This is also an opportunity which must be harnessed for the
+good of football everywhere.
+Football must have Laws which keep the game ‘fair’ as a crucial foundation of
+the beauty of the ‘beautiful game’ is its fairness – this is a vital feature of the
+‘spirit’ of the game. The best matches are those where the referee is rarely
+needed as the players play with respect for each other, the match officials and
+the Laws.
+The integrity of the Laws, and the referees who apply them, must always be
+protected and respected. All those in authority, especially coaches and team
+captains, have a clear responsibility to the game to respect the match officials
+and their decisions. </string>
+    <string name="law_two_details"><b>Qualities and measurements</b>\n All balls must be:\n • spherical • made of suitable material of a circumference of between 70 cm (28 ins) and 68 cm (27 ins) • between 450 g (16 oz) and 410 g (14 oz) in weight at the start of the match • of a pressure equal to 0.6–1.1 atmosphere (600 –1,100 g/cm2) at sea level (8.5lbs/sq in–15.6 lbs/sq in) All balls used in matches played in an official competition organised under the auspices of FIFA or confederations must bear one of the following:\n Each mark indicates that it has been officially tested and meets the specific technical requirements for that mark which are additional to the minimum specifications stipulated in Law 2 and must be approved by The IFAB. The institutes conducting the tests are subject to the approval of FIFA. Where goal line technology (GLT) is used, balls with integrated technology must carry one of the above listed quality marks. National football association competitions may require the use of balls bearing one of these marks. In matches played in an official competition organised under the auspices of FIFA, confederations or national football associations, no form of commercial advertising is permitted on the ball, except for the logo/emblem of the competition, the competition organiser and the authorised manufacturer’s trademark. The competition regulations may restrict the size and number of such markings. 2. Replacement of a defective ball If the ball becomes defective: • play is stopped and • restarted by dropping the replacement ball where the original ball became defective If the ball becomes defective at a kick-off, goal kick, corner kick, free kick, penalty kick or throw-in the restart is re-taken. If the ball becomes defective during a penalty kick or kicks from the penalty mark as it moves forward and before it touches a player, crossbar or goalposts the penalty kick is retaken. The ball may not be changed during the match without the referee’s permission. 3. Additional balls Additional balls which meet the requirements of Law 2 may be placed around the field of play and their use is under the referee’s control.</string>
+    <string name="law_three_details"><b>Number of players</b> \n A match is played by two teams, each with a maximum of eleven players; one must be the goalkeeper. A match may not start or continue if either team has fewer than seven players. If a team has fewer than seven players because one or more players has deliberately left the field of play, the referee is not obliged to stop play and the advantage may be played, but the match must not resume after the ball has gone out of play if a team does not have the minimum number of seven players. If the competition rules state that all players and substitutes must be named before kick-off and a team starts a match with fewer than eleven players, only the players and substitutes named on the team list may take part in the match upon their arrival. outside the field of play If a player who requires the referee’s permission to re-enter the field of play re-enters without the referee’s permission, the referee must: • stop play (not immediately if the player does not interfere with play or a match official or if the advantage can be applied) • caution the player for entering the field of play without permission If the referee stops play, it must be restarted: • with a direct free kick from the position of the interference • with an indirect free kick from the position of the ball when play was stopped if there was no interference A player who crosses a boundary line as part of a playing movement, does not commit an offence. 9. Goal scored with an extra person on the field of play If, after a goal is scored, the referee realises, before play restarts, an extra person was on the field of play when the goal was scored: • the referee must disallow the goal if the extra person was: • a player, substitute, substituted player, sent off player or team official of the team that scored the goal; play is restarted with a direct free kick from the position of the extra person • an outside agent who interfered with play unless a goal results as outlined above in ‘extra persons on the field of play’; play is restarted with a dropped ball • the referee must allow the goal if the extra person was: • a player, substitute, substituted player, sent off player or team official of the team that conceded the goal • an outside agent who did not interfere with play 52 In all cases, the referee must have the extra person removed from the field of play. If, after a goal is scored and play has restarted, the referee realises an extra person was on the field of play when the goal was scored, the goal can not be disallowed. If the extra person is still on the field the referee must:  stop play </string>
+    <string name="law_four_details">Safety A player must not use equipment or wear anything that is dangerous. All items of jewellery (necklaces, rings, bracelets, earrings, leather bands, rubber bands, etc.) are forbidden and must be removed. Using tape to cover jewellery is not permitted. The players must be inspected before the start of the match and substitutes before they enter the field of play. If a player is wearing or using unauthorised/ dangerous equipment or jewellery the referee must order the player to: • remove the item • leave the field of play at the next stoppage if the player is unable or unwilling to comply A player who refuses to comply or wears the item again must be cautioned. 2. Compulsory equipment The compulsory equipment of a player comprises the following separate items: • a shirt with sleeves • shorts • socks – tape or any material applied or worn externally must be the same colour as that part of the sock it is applied to or covers • shinguards – these must be made of a suitable material to provide reasonable protection and covered by the socks • footwear Goalkeepers may wear tracksuit bottoms. The Players’ Equipment 56 A player whose footwear or shinguard is lost accidentally must replace it as soon as possible and no later than when the ball next goes out of play; if before doing so the player plays the ball and/or scores a goal, the goal is awarded. 3. Colours • The two teams must wear colours that distinguish them from each other and the match officials • Each goalkeeper must wear colours that are distinguishable from the other players and the match officials • If the two goalkeepers’ shirts are the same colour and neither has another shirt, the referee allows the match to be played Undershirts must be the same colour as the main colour of the shirt sleeve; undershorts/tights must be the same colour as the main colour of the shorts or the lowest part of the shorts – players of the same team must wear the same colour. 4. Other equipment Non-dangerous protective equipment, for example headgear, facemasks and knee and arm protectors made of soft, lightweight padded material is permitted as are goalkeepers’ caps and sports spectacles. Head Covers Where head covers (excluding goalkeepers’ caps) are worn, they must: • be black or the same main colour as the shirt (provided that the players of the same team wear the same colour) • be in keeping with the professional appearance of the player’s equipment • not be attached to the shirt • not be dangerous to the player wearing it or any other player (e.g. opening/ closing mechanism around neck) • not have any part(s) extending out from the surface (protruding elements) 57 Electronic communication Players (including substitutes/substituted and sent off players) are not permitted to wear or use any form of electronic or communication equipment (except where EPTS is allowed). The use of any form of electronic communication by team officials is permitted where it directly relates to player welfare or safety or for tactical/coaching reasons but only small, mobile, hand-held equipment (e.g. microphone, headphone, ear-piece, mobilephone/ smartphone, smartwatch, tablet, laptop) may be used. A team official who uses unauthorised equipment or who behaves in an inappropriate manner as a result of the use of electronic or communication equipment will be dismissed from the technical area. Electronic performance and tracking systems (EPTS) Where wearable technology (WT) as part of electronic performance and tracking systems (EPTS) is used in matches played in an official competition organised under the auspices of FIFA, confederations or national football associations, the competition organiser must ensure that the technology attached to the player’s equipment is not dangerous and must bear the following mark: This mark indicates that it has been officially tested and meets the minimum safety requirements of the International Match Standard developed by FIFA and approved by The IFAB. The institutes conducting these tests are subject to the approval of FIFA. Where electronic performance and tracking systems (EPTS) are used (subject to the agreement of the national football association/competition organiser) the competition organiser must ensure that the information and data transmitted from EPTS to the technical area during the match in matches played in an official competition are reliable and accurate. A professional standard was developed by FIFA and approved by The IFAB in order to support the competition organisers with the approval process of reliable and accurate electronic performance and tracking systems. Laws of the Game 2018/19 | Law 04 | The Players’ Equipment 58 The professional standard will be implemented in the transition period until 1 June 2019. The following mark indicates that an EPTS device/system has been officially tested and meets the requirements in terms of reliability and accuracy of positional data in football: 5. Slogans, statements, images and advertising Equipment must not have any political, religious or personal slogans, statements or images. Players must not reveal undergarments that show political, religious, personal slogans, statements or images, or advertising other than the manufacturer`s logo. For any offence the player and/or the team will be sanctioned by the competition organiser, national football association or by FIFA. Principles • Law 4 applies to all equipment (including clothing) worn by players, substitutes and substituted players; its principles also apply to all team officials in the technical area • The following are (usually) permitted: • the player’s number, name, team crest/logo, initiative slogans/emblems promoting the game of football, respect and integrity as well as any advertising permitted by competition rules or national FA, confederation or FIFA regulations • the facts of a match: teams, date, competition/event, venue • Permitted slogans, statements or images should be confined to the shirt front and/or armband • In some cases, the slogan, statement or image might only appear on the captain’s armband 59 Interpreting the Law When interpreting whether a slogan, statement or image is permissible, note should be taken of Law 12 (Fouls and Misconduct), which requires the referee to take action against a player who is guilty of: • using offensive, insulting or abusive language and/or gestures • gesturing in a provocative, derisory or inflammatory way Any slogan, statement or image which falls into any of these categories is not permitted. Whilst ‘religious’ and ‘personal’ are relatively easily defined, ‘political’ is less clear but slogans, statements or images related to the following are not permitted: • any person(s), living or dead (unless part of the official competition name) • any local, regional, national or international political party/organisation/ group, etc. • any local, regional or national government or any of its departments, offices or functions • any organisation which is discriminatory • any organisation whose aims/actions are likely to offend a notable number of people • any specific political act/event When commemorating a significant national or international event, the sensibilities of the opposing team (including its supporters) and the general public should be carefully considered. Competition rules may contain further restrictions/limitations, particularly in relation to the size, number and position of permitted slogans, statements and images. It is recommended that disputes relating to slogans, statements or images be resolved prior to a match/competition taking place. Laws of the Game 2018/19 | Law 04 | The Players’ Equipment 60 6. Offences and sanctions For any offence play need not be stopped and the player: • is instructed by the referee to leave the field of play to correct the equipment • leaves when play stops, unless the equipment has already been corrected A player who leaves the field of play to correct or change equipment must: • have the equipment checked by a match official before being allowed to re-enter • only re-enter with the referee’s permission (which may be given during play) A player who enters without permission must be cautioned and if play is stopped to issue the caution, an indirect free kick is awarded from the position of the ball when play was stopped, unless there was interference in which case a direct free kick (or penalty kick) is awarded from the position of the interference</string>
+    <string name="law_eight_details">A kick-off starts both halves of a match, both halves of extra time and restarts play after a goal has been scored. Free kicks (direct or indirect), penalty kicks, throw-ins, goal kicks and corner kicks are other restarts (see Laws 13–17). A dropped ball is the restart when the referee stops play and the Law does not require one of the above restarts. If an offence occurs when the ball is not in play this does not change how play is restarted. 1. Kick-off Procedure • the team that wins the toss of a coin decides which goal it will attack in the first half • their opponents take the kick-off • the team that wins the toss takes the kick-off to start the second half • for the second half, the teams change ends and attack the opposite goals • after a team scores a goal, the kick-off is taken by their opponents For every kick-off: • all players, except the player taking the kick-off, must be in their own half of the field of play • the opponents of the team taking the kick-off must be at least 9.15 m (10 yds) from the ball until it is in play • the ball must be stationary on the centre mark • the referee gives a signal • the ball is in play when it is kicked and clearly moves • a goal may be scored directly against the opponents from the kick-off; if the ball directly enters the kicker’s goal, a corner kick is awarded to the opponents The Start and Restart of Play86 Offences and sanctions If the player taking the kick-off touches the ball again before it has touched another player an indirect free kick, or for deliberate handball a direct free kick, is awarded. In the event of any other kick-off procedure offence the kick-off is retaken. 2. Dropped ball Procedure The referee drops the ball at the position where it was when play was stopped, unless play was stopped inside the goal area in which case the ball is dropped on the goal area line which is parallel to the goal line at the point nearest to where the ball was when play was stopped. The ball is in play when it touches the ground. Any number of players may contest a dropped ball (including the goalkeepers); the referee cannot decide who may contest a dropped ball or its outcome. Offences and sanctions The ball is dropped again if it: • touches a player before it touches the ground • leaves the field of play after it touches the ground, without touching a player If a dropped ball enters the goal without touching at least two players play is restarted with: • a goal kick if it enters the opponents’ goal • a corner kick if it enters the team’s goal</string>
+    <string name="law_twelve_details">Direct and indirect free kicks and penalty kicks can only be awarded for
+offences committed when the ball is in play.
+1. Direct free kick
+A direct free kick is awarded if a player commits any of the following
+offences against an opponent in a manner considered by the referee to be
+careless, reckless or using excessive force:
+• charges
+• jumps at
+• kicks or attempts to kick
+• pushes
+• strikes or attempts to strike (including head-butt)
+• tackles or challenges
+• trips or attempts to trip
+If an offence involves contact it is penalised by a direct free kick or
+penalty kick.
+• Careless is when a player shows a lack of attention or consideration when
+making a challenge or acts without precaution. No disciplinary sanction
+is needed
+• Reckless is when a player acts with disregard to the danger to,
+or consequences for, an opponent and must be cautioned
+• Using excessive force is when a player exceeds the necessary use of force
+and/or endangers the safety of an opponent and must be sent off
+A direct free kick is awarded if a player commits any of the following offences:
+• handles the ball deliberately (except for the goalkeeper within their
+penalty area) holds an opponent
+• impedes an opponent with contact
+• bites or spits at someone
+• throws an object at the ball, opponent or match official, or makes contact
+with the ball with a held object</string>
+    <string name="law_thirteen_details">
+Direct and indirect free kicks are awarded to the opposing team of a player,
+substitute, substituted or sent off player, or team official guilty of an offence.
+Indirect free kick signal
+The referee indicates an indirect free kick by raising the arm above the head;
+this signal is maintained until the kick has been taken and the ball touches
+another player or goes out of play.
+An indirect free kick must be retaken if the referee fails to signal that the kick is
+indirect and the ball is kicked directly into the goal.
+Ball enters the goal
+• if a direct free kick is kicked directly into the opponents’ goal,
+a goal is awarded
+• if an indirect free kick is kicked directly into the opponents’ goal,
+a goal kick is awarded
+• if a direct or indirect free kick is kicked directly into the team’s
+own goal, a corner kick is awarded
+2. Procedure
+All free kicks are taken from the place where the offence occurred, except:
+• indirect free kicks to the attacking team for an offence inside the opponents’
+goal area are taken from the nearest point on the goal area line which runs
+parallel to the goal line
+• free kicks to the defending team in their goal area may be taken from
+anywhere in that area
+
+</string>
+    <string name="law_ten_details"><b>WHEN A GOAL IS SCORED</b>\n
+        A goal is scored when the whole of the ball passes over the goal line, between the goalposts and under the crossbar, provided that no offence has been committed by the team scoring the goal.
+        If a referee signals a goal before the ball has passed wholly over the goal line, play is restarted with a dropped ball.
+        <b>WINNING TEAM</b>\n
+        The team scoring the greater number of goals is the winner. \n If both teams score no goals or an equal number of goals the match is drawn.\n
+When competition rules require a winning team after a drawn match or home and-away tie, the only permitted procedures to determine the winning team are:
+away goal rule two equal periods of extra time not exceeding 15 minutes each
+kicks from the penalty mark \n
+A combination of the above procedures may be used.
+
+
+    </string>
+    <string name="law_sixteen_details">A goal kick is awarded when the whole of the ball passes over the goal line,
+on the ground or in the air, having last touched a player of the attacking team,
+and a goal is not scored.
+A goal may be scored directly from a goal kick, but only against the opposing
+team; if the ball directly enters the kicker’s goal a corner kick is awarded to the
+opponents if the ball left the penalty area.</string>
+    <string name="law_six_details">Other match officials (two assistant referees, fourth official, two additional
+assistant referees, reserve assistant referee, video assistant referee (VAR) and
+at least one assistant VAR (AVAR)) may be appointed to matches. They will
+assist the referee in controlling the match in accordance with the Laws of the
+Game but the final decision will always be taken by the referee.
+The referee, assistant referees, fourth official, additional assistant referees and
+reserve assistant referee are the ‘on-field’ match officials.
+The VAR and AVAR are the ‘video’ match officials and assist the referee in
+accordance with the VAR protocol as determined by The IFAB.
+The match officials operate under the direction of the referee. In the event
+of undue interference or improper conduct, the referee will relieve them of
+their duties and make a report to the appropriate authorities.
+</string>
+    <string name="law_seventeen_details">A corner kick is awarded when the whole of the ball passes over the goal line,
+on the ground or in the air, having last touched a player of the defending team,
+and a goal is not scored.
+A goal may be scored directly from a corner kick, but only against the opposing
+team; if the ball directly enters the kicker’s goal a corner kick is awarded to the
+opponents.
+1. Procedure
+• The ball must be placed in the corner area nearest to the point where the
+ball passed over the goal line
+• The ball must be stationary and is kicked by a player of the attacking team
+• The ball is in play when it is kicked and clearly moves; it does not need to
+leave the corner area
+• The corner flagpost must not be moved
+• Opponents must remain at least 9.15 m (10 yds) from the corner arc until
+the ball is in play
+</string>
+    <string name="law_seven_details">1. Periods of play
+A match lasts for two equal halves of 45 minutes which may only be reduced
+if agreed between the referee and the two teams before the start of the match
+and is in accordance with competition rules.
+2. Half-time interval
+Players are entitled to an interval at half-time, not exceeding 15 minutes;
+a short drinks break (which should not exceed one minute) is permitted at the
+interval of half-time in extra time. Competition rules must state the duration of
+the half-time interval and it may be altered only with the referee’s permission.
+3. Allowance for time lost
+Allowance is made by the referee in each half for all time lost in that half
+through:
+• substitutions
+• assessment and/or removal of injured players
+• wasting time
+• disciplinary sanctions
+• stoppages for drinks (which should not exceed one minute) or other medical
+reasons permitted by competition rules
+• delays relating to VAR ‘checks’ and ‘reviews’
+• any other cause, including any significant delay to a restart
+(e.g. goal celebrations)
+</string>
+    <string name="law_nine_details">1. Ball out of play
+The ball is out of play when:
+• it has wholly passed over the goal line or touchline on the ground or
+in the air
+• play has been stopped by the referee
+2. Ball in play
+The ball is in play at all other times, including when it rebounds off a match
+official, goalpost, crossbar or corner flagpost and remains in the field of play.</string>
+    <string name="law_fourteen_details">A penalty kick is awarded if a player commits a direct free kick offence inside
+their penalty area or off the field as part of play as outlined in Laws 12 and 13.
+A goal may be scored directly from a penalty kick.
+1. Procedure
+The ball must be stationary on the penalty mark.
+The player taking the penalty kick must be clearly identified.
+The defending goalkeeper must remain on the goal line, facing the kicker,
+between the goalposts until the ball has been kicked.
+The players other than the kicker and goalkeeper must be:
+• at least 9.15 m (10 yds) from the penalty mark
+• behind the penalty mark
+• inside the field of play
+• outside the penalty area
+After the players have taken positions in accordance with this Law, the referee
+signals for the penalty kick to be taken.
+The player taking the penalty kick must kick the ball forward; backheeling is
+permitted provided the ball moves forward.
+The ball is in play when it is kicked and clearly moves.
+The kicker must not play the ball again until it has touched another player.
+The penalty kick is completed when the ball stops moving, goes out of play or
+the referee stops play for any offence.</string>
+    <string name="law_five_details">1. The authority of the referee
+Each match is controlled by a referee who has full authority to enforce
+the Laws of the Game in connection with the match.
+2. Decisions of the referee
+Decisions will be made to the best of the referee`s ability according to the Laws
+of the Game and the ‘spirit of the game’ and will be based on the opinion of the
+referee who has the discretion to take appropriate action within the framework
+of the Laws of the Game.
+The decisions of the referee regarding facts connected with play, including
+whether or not a goal is scored and the result of the match, are final. The
+decisions of the referee, and all other match officials, must always be respected.
+The referee may not change a decision on realising that it is incorrect or on the
+advice of another match official if play has restarted or the referee has
+signalled the end of the first or second half (including extra time) and left the
+field of play or terminated the match.
+If a referee is incapacitated, play may continue under the supervision of the
+other match officials until the ball is next out of play</string>
+    <string name="law_fifteen_details">
+        PROCEDURE
+        At the moment of delivering the ball, the thrower must:stand facing the field of play
+have part of each foot on the touchline or on the ground outside the touchline
+throw the ball with both hands from behind and over the head from the point where it left the field of play
+All opponents must stand at least 2 m (2 yds) from the point at which the throw-in is taken.
+
+The ball is in play when it enters the field of play. If the ball touches the ground before entering, the throw-in is retaken by the same team from the same position. If the throw-in is not taken correctly it is retaken by the opposing team.
+
+If a player, while correctly taking a throw-in, intentionally throws the ball at an opponent in order to play the ball again but neither in a careless nor a reckless manner nor using excessive force, the referee allows play to continue.
+
+The thrower must not touch the ball again until it has touched another player.
+
+    </string>
+    <string name="law_eleven_details">The ball must be placed in the corner area nearest to the point where the ball passed over the goal line
+The ball must be stationary and is kicked by a player of the attacking team
+The ball is in play when it is kicked and clearly moves; it does not need to leave the corner area
+The corner flagpost must not be moved
+Opponents must remain at least 9.15 m (10 yds) from the corner arc until the ball is in play
+        OFFENCES
+        If, after the ball is in play, the kicker touches the ball again before it has touched another player an indirect free kick is awarded; if the kicker deliberately handles the ball:
+
+a direct free kick is awarded
+a penalty kick is awarded if the offence occurred inside the kicker’s penalty area unless the kicker was the goalkeeper in which case an indirect free kick is awarded
+If a player, while correctly taking a corner kick, intentionally kicks the ball at an opponent in order to play the ball again but not in a careless or reckless manner or using excessive force, the referee allows play to continue.
+
+For any other offence the kick is retaken.
+    </string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_chk">CHK</string>
+
+
+</resources>

@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+
+    <com.tuyenmonkey.mkloader.MKLoader
+        android:id="@+id/myprogress"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="@+id/recyclerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:mk_color="#ef3e44"
+        app:mk_type="Whirlpool" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/recyclerView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/recyclerView"/>
+
+
+    <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:scrollbars="none"-->
+        <!--android:layout_height="match_parent">-->
+        <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="vertical">-->
+
+           <!--<LinearLayout-->
+               <!--android:layout_width="match_parent"-->
+               <!--android:background="@drawable/outline"-->
+               <!--android:layout_height="match_parent"-->
+               <!--android:id="@+id/introduction"-->
+               <!--android:onClick="intro"-->
+               <!--android:layout_marginTop="@dimen/activity_vertical_margin"-->
+               <!--android:weightSum="10">-->
+               <!--<de.hdodenhof.circleimageview.CircleImageView-->
+                   <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+                   <!--android:id="@+id/profile_image"-->
+                   <!--android:layout_width="96dp"-->
+                   <!--android:layout_height="96dp"-->
+                   <!--android:src="@drawable/law_bg"-->
+                   <!--app:civ_border_width="2dp"-->
+                   <!--app:civ_border_color="#232522"/>-->
+
+               <!--<TextView-->
+                   <!--android:layout_width="match_parent"-->
+                   <!--android:layout_height="match_parent"-->
+                   <!--android:text="INTRODUCTION TO THE GAME"-->
+                   <!--android:textAlignment="center"-->
+                   <!--android:textStyle="bold"-->
+                   <!--android:textColor="@color/design_default_color_primary"-->
+                   <!--android:gravity="center_vertical"/>-->
+           <!--</LinearLayout>-->
+           <!--<LinearLayout-->
+               <!--android:id="@+id/lawone"-->
+               <!--android:layout_width="match_parent"-->
+              <!--android:background="@drawable/outline"-->
+               <!--android:layout_height="match_parent"-->
+               <!--android:layout_marginTop="@dimen/activity_vertical_margin"-->
+               <!--android:orientation="horizontal"-->
+               <!--android:onClick="law_one"-->
+               <!--android:weightSum="1">-->
+               <!--<de.hdodenhof.circleimageview.CircleImageView-->
+                   <!--android:layout_width="96dp"-->
+                   <!--android:layout_height="96dp"-->
+                   <!--android:src="@drawable/lawoneb"-->
+                   <!--app:civ_border_width="2dp"-->
+                   <!---->
+                   <!--app:civ_border_color="#232522"/>-->
+
+               <!--<TextView-->
+                   <!--android:layout_width="match_parent"-->
+                   <!--android:layout_height="match_parent"-->
+                   <!--android:gravity="center_vertical"-->
+                   <!--android:text="THE FIELD OF PLAY\n ( FIFA LAW 1 )"-->
+                   <!--android:textAlignment="center"-->
+                   <!--android:textColor="@color/design_default_color_primary"-->
+                   <!--android:textStyle="bold" />-->
+           <!--</LinearLayout>-->
+           <!--<LinearLayout-->
+               <!--android:layout_width="match_parent"-->
+              <!--android:background="@drawable/outline"-->
+               <!--android:layout_height="match_parent"-->
+               <!--android:onClick="law_two"-->
+               <!--android:layout_marginTop="@dimen/activity_vertical_margin"-->
+               <!--android:orientation="horizontal"-->
+               <!--android:weightSum="1">-->
+               <!--<de.hdodenhof.circleimageview.CircleImageView-->
+                   <!--android:layout_width="96dp"-->
+                   <!--android:layout_height="96dp"-->
+                   <!--android:src="@drawable/lawtwoa"-->
+                   <!--app:civ_border_width="2dp"-->
+
+                   <!--app:civ_border_color="#232522"/>-->
+
+               <!--<TextView-->
+                   <!--android:layout_width="match_parent"-->
+                   <!--android:layout_height="match_parent"-->
+                   <!--android:gravity="center_vertical"-->
+                   <!--android:text="THE BALL\n ( FIFA LAW 2 )"-->
+                   <!--android:textAlignment="center"-->
+                   <!--android:textColor="@color/design_default_color_primary"-->
+                   <!--android:textStyle="bold" />-->
+           <!--</LinearLayout>-->
+           <!--<LinearLayout-->
+               <!--android:layout_width="match_parent"-->
+              <!--android:background="@drawable/outline"-->
+               <!--android:layout_height="match_parent"-->
+               <!--android:layout_marginTop="@dimen/activity_vertical_margin"-->
+               <!--android:onClick="law_three"-->
+               <!--android:orientation="horizontal"-->
+               <!--android:weightSum="1">-->
+               <!--<de.hdodenhof.circleimageview.CircleImageView-->
+                   <!--android:layout_width="96dp"-->
+                   <!--android:layout_height="96dp"-->
+                   <!--android:src="@drawable/lawthreea"-->
+                   <!--app:civ_border_width="2dp"-->
+                   <!--app:civ_border_color="#232522"/>-->
+
+               <!--<TextView-->
+                   <!--android:layout_width="match_parent"-->
+                   <!--android:layout_height="match_parent"-->
+                   <!--android:gravity="center_vertical"-->
+                   <!--android:text="THE PLAYERS\n ( FIFA LAW 3 )"-->
+                   <!--android:textAlignment="center"-->
+                   <!--android:textColor="@color/design_default_color_primary"-->
+                   <!--android:textStyle="bold" />-->
+           <!--</LinearLayout>-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+               <!--android:background="@drawable/outline"-->
+               <!--android:layout_height="match_parent"-->
+                <!--android:onClick="law_four"-->
+                <!--android:layout_marginTop="@dimen/activity_vertical_margin"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:weightSum="1">-->
+                <!--<de.hdodenhof.circleimageview.CircleImageView-->
+                    <!--android:layout_width="96dp"-->
+                    <!--android:layout_height="96dp"-->
+                    <!--android:src="@drawable/law_bg"-->
+                    <!--app:civ_border_width="2dp"-->
+                    <!---->
+                    <!--app:civ_border_color="#232522"/>-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:text="THE PLAYERS' EQUIPMENT\n ( FIFA LAW 4 )"-->
+                    <!--android:textAlignment="center"-->
+                    <!--android:textColor="@color/design_default_color_primary"-->
+                    <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+               <!--android:background="@drawable/outline"-->
+               <!--android:layout_height="match_parent"-->
+                <!--android:onClick="law_five"-->
+                <!--android:layout_marginTop="@dimen/activity_vertical_margin"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:weightSum="1">-->
+                <!--<de.hdodenhof.circleimageview.CircleImageView-->
+                    <!--android:layout_width="96dp"-->
+                    <!--android:layout_height="96dp"-->
+                    <!--android:src="@drawable/law_bg"-->
+                    <!--app:civ_border_width="2dp"-->
+                    <!---->
+                    <!--app:civ_border_color="#232522"/>-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:text="THE REFEREE\n ( FIFA LAW 5 )"-->
+                    <!--android:textAlignment="center"-->
+                    <!--android:textColor="@color/design_default_color_primary"-->
+                    <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+               <!--android:background="@drawable/outline"-->
+               <!--android:layout_height="match_parent"-->
+                <!--android:onClick="law_six"-->
+                <!--android:layout_marginTop="@dimen/activity_vertical_margin"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:weightSum="1">-->
+                <!--<de.hdodenhof.circleimageview.CircleImageView-->
+                    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+                    <!--android:layout_width="96dp"-->
+                    <!--android:layout_height="96dp"-->
+                    <!--android:src="@drawable/law_bg"-->
+                    <!--app:civ_border_width="2dp"-->
+                    <!---->
+                    <!--app:civ_border_color="#232522"/>-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:text="THE OTHER MATCH OFFICIALS\n ( FIFA LAW 6 )"-->
+                    <!--android:textAlignment="center"-->
+                    <!--android:textColor="@color/design_default_color_primary"-->
+                    <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:onClick="law_seven"-->
+                <!--android:background="@drawable/outline"-->
+               <!--android:layout_height="match_parent"-->
+                <!--android:layout_marginTop="@dimen/activity_vertical_margin"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:weightSum="1">-->
+                <!--<de.hdodenhof.circleimageview.CircleImageView-->
+                    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+                    <!--android:layout_width="96dp"-->
+                    <!--android:layout_height="96dp"-->
+                    <!--android:src="@drawable/law_bg"-->
+                    <!--app:civ_border_width="2dp"-->
+                    <!---->
+                    <!--app:civ_border_color="#232522"/>-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:text="THE DURATION OF THE MATCH\n ( FIFA LAW 7 )"-->
+                    <!--android:textAlignment="center"-->
+                    <!--android:textColor="@color/design_default_color_primary"-->
+                    <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:onClick="law_eight"-->
+                <!--android:background="@drawable/outline"-->
+               <!--android:layout_height="match_parent"-->
+                <!--android:layout_marginTop="@dimen/activity_vertical_margin"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:weightSum="1">-->
+                <!--<de.hdodenhof.circleimageview.CircleImageView-->
+                    <!--android:layout_width="96dp"-->
+                    <!--android:layout_height="96dp"-->
+                    <!--android:src="@drawable/law_bg"-->
+                    <!--app:civ_border_width="2dp"-->
+                    <!---->
+                    <!--app:civ_border_color="#232522"/>-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:text="THE START AND RESTART OF PLAY\n ( FIFA LAW 8 )"-->
+                    <!--android:textAlignment="center"-->
+                    <!--android:textColor="@color/design_default_color_primary"-->
+                    <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+               <!--android:background="@drawable/outline"-->
+               <!--android:layout_height="match_parent"-->
+                <!--android:onClick="law_nine"-->
+                <!--android:layout_marginTop="@dimen/activity_vertical_margin"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:weightSum="1">-->
+                <!--<de.hdodenhof.circleimageview.CircleImageView-->
+                    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+                    <!--android:layout_width="96dp"-->
+                    <!--android:layout_height="96dp"-->
+                    <!--android:src="@drawable/law_bg"-->
+                    <!--app:civ_border_width="2dp"-->
+                    <!---->
+                    <!--app:civ_border_color="#232522"/>-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:text="THE BALL IN AND OUT OF PLAY\n ( FIFA LAW 9 )"-->
+                    <!--android:textAlignment="center"-->
+                    <!--android:textColor="@color/design_default_color_primary"-->
+                    <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+               <!--android:background="@drawable/outline"-->
+                <!--android:onClick="law_ten"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_marginTop="@dimen/activity_vertical_margin"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:weightSum="1">-->
+                <!--<de.hdodenhof.circleimageview.CircleImageView-->
+                    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+                    <!--android:layout_width="96dp"-->
+                    <!--android:layout_height="96dp"-->
+                    <!--android:src="@drawable/law_bg"-->
+                    <!--app:civ_border_width="2dp"-->
+                    <!---->
+                    <!--app:civ_border_color="#232522"/>-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:text="DETERMINING THE OUTCOME OF A MATCH\n ( FIFA LAW 10 )"-->
+                    <!--android:textAlignment="center"-->
+                    <!--android:textColor="@color/design_default_color_primary"-->
+                    <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:onClick="law_eleven"-->
+                <!--android:background="@drawable/outline"-->
+               <!--android:layout_height="match_parent"-->
+                <!--android:layout_marginTop="@dimen/activity_vertical_margin"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:weightSum="1">-->
+                <!--<de.hdodenhof.circleimageview.CircleImageView-->
+                    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+                    <!--android:layout_width="96dp"-->
+                    <!--android:layout_height="96dp"-->
+                    <!--android:src="@drawable/law_bg"-->
+                    <!--app:civ_border_width="2dp"-->
+                    <!---->
+                    <!--app:civ_border_color="#232522"/>-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:text="OFFSIDE\n ( FIFA LAW 11 )"-->
+                    <!--android:textAlignment="center"-->
+                    <!--android:textColor="@color/design_default_color_primary"-->
+                    <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+               <!--android:background="@drawable/outline"-->
+                <!--android:onClick="law_twelve"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_marginTop="@dimen/activity_vertical_margin"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:weightSum="1">-->
+                <!--<de.hdodenhof.circleimageview.CircleImageView-->
+                    <!--android:layout_width="96dp"-->
+                    <!--android:layout_height="96dp"-->
+                    <!--android:src="@drawable/law_bg"-->
+                    <!--app:civ_border_width="2dp"-->
+                    <!---->
+                    <!--app:civ_border_color="#232522"/>-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:text="FOULS AND MISCONDUCT\n ( FIFA LAW 12 )"-->
+                    <!--android:textAlignment="center"-->
+                    <!--android:textColor="@color/design_default_color_primary"-->
+                    <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:onClick="thirteen"-->
+                <!--android:background="@drawable/outline"-->
+               <!--android:layout_height="match_parent"-->
+                <!--android:layout_marginTop="@dimen/activity_vertical_margin"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:weightSum="1">-->
+                <!--<de.hdodenhof.circleimageview.CircleImageView-->
+                    <!--android:layout_width="96dp"-->
+                    <!--android:layout_height="96dp"-->
+                    <!--android:src="@drawable/law_bg"-->
+                    <!--app:civ_border_width="2dp"-->
+                    <!---->
+                    <!--app:civ_border_color="#232522"/>-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:text="FREE KICKS\n ( FIFA LAW 13 )"-->
+                    <!--android:textAlignment="center"-->
+                    <!--android:textColor="@color/design_default_color_primary"-->
+                    <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+               <!--android:background="@drawable/outline"-->
+               <!--android:layout_height="match_parent"-->
+                <!--android:onClick="law_fourteen"-->
+                <!--android:layout_marginTop="@dimen/activity_vertical_margin"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:weightSum="1">-->
+                <!--<de.hdodenhof.circleimageview.CircleImageView-->
+                    <!--android:layout_width="96dp"-->
+                    <!--android:layout_height="96dp"-->
+                    <!--android:src="@drawable/law_bg"-->
+                    <!--app:civ_border_width="2dp"-->
+                    <!---->
+                    <!--app:civ_border_color="#232522"/>-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:text="THE PENALTY KICK\n ( FIFA LAW 14 )"-->
+                    <!--android:textAlignment="center"-->
+                    <!--android:textColor="@color/design_default_color_primary"-->
+                    <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+               <!--android:background="@drawable/outline"-->
+                <!--android:onClick="law_fifteen"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:layout_marginTop="@dimen/activity_vertical_margin"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:weightSum="1">-->
+                <!--<de.hdodenhof.circleimageview.CircleImageView-->
+                    <!--android:layout_width="96dp"-->
+                    <!--android:layout_height="96dp"-->
+                    <!--android:src="@drawable/law_bg"-->
+                    <!--app:civ_border_width="2dp"-->
+                    <!---->
+                    <!--app:civ_border_color="#232522"/>-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:text="THE THROW-IN\n ( FIFA LAW 15 )"-->
+                    <!--android:textAlignment="center"-->
+                    <!--android:textColor="@color/design_default_color_primary"-->
+                    <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+               <!--android:background="@drawable/outline"-->
+               <!--android:layout_height="match_parent"-->
+                <!--android:onClick="law_sixteen"-->
+                <!--android:layout_marginTop="@dimen/activity_vertical_margin"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:weightSum="1">-->
+                <!--<de.hdodenhof.circleimageview.CircleImageView-->
+                    <!--android:layout_width="96dp"-->
+                    <!--android:layout_height="96dp"-->
+                    <!--android:src="@drawable/law_bg"-->
+                    <!--app:civ_border_width="2dp"-->
+                    <!---->
+                    <!--app:civ_border_color="#232522"/>-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:text="THE GOAL KICK\n ( FIFA LAW 16 )"-->
+                    <!--android:textAlignment="center"-->
+                    <!--android:textColor="@color/design_default_color_primary"-->
+                    <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+               <!--android:background="@drawable/outline"-->
+               <!--android:layout_height="match_parent"-->
+                <!--android:layout_marginTop="@dimen/activity_vertical_margin"-->
+                <!--android:onClick="law_seventeen"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:weightSum="1">-->
+                <!--<de.hdodenhof.circleimageview.CircleImageView-->
+                    <!--android:layout_width="96dp"-->
+                    <!--android:layout_height="96dp"-->
+                    <!--android:src="@drawable/law_bg"-->
+                    <!--app:civ_border_width="2dp"-->
+                    <!---->
+                    <!--app:civ_border_color="#232522"/>-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:gravity="center_vertical"-->
+                    <!--android:text="THE CORNER KICK\n ( FIFA LAW 17 )"-->
+                    <!--android:textAlignment="center"-->
+                    <!--android:textColor="@color/design_default_color_primary"-->
+                    <!--android:textStyle="bold" />-->
+            <!--</LinearLayout>-->
+        <!--</LinearLayout>-->
+
+    <!--</ScrollView>-->
+
+</android.support.constraint.ConstraintLayout>

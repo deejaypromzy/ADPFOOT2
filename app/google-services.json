@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "441305874424",
+    "firebase_url": "https://adpfoot-ece92.firebaseio.com",
+    "project_id": "adpfoot-ece92",
+    "storage_bucket": "adpfoot-ece92.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:441305874424:android:ae4b3b1f825c197d",
+        "android_client_info": {
+          "package_name": "com.projectwork.adp.adpfoot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "441305874424-02vt6ihkc933iqrv85om2ia5evtck7kt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAACOnRuaB8eMzInpSOiMeEO5ipueRKAlo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "441305874424-02vt6ihkc933iqrv85om2ia5evtck7kt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
