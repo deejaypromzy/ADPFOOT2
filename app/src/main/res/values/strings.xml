@@ -233,6 +233,8 @@ For any other offence the kick is retaken.
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_chk">CHK</string>
+    <string name="title_activity_add_fifi_laws">AddFifiLaws</string>
+    <string name="title_activity_update_fifi_laws">UpdateFifiLaws</string>
 
 
 </resources>

@@ -190,11 +190,7 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.glossary) {
             startActivity(new Intent(MainActivity.this,Glossary.class));
         }else if (id == R.id.add_laws) {
-            AddLaw addLawFragment = new AddLaw();
-            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.replace(R.id.container, addLawFragment);
-            fragmentTransaction.addToBackStack(null);
-            fragmentTransaction.commit();
+           startActivity(new Intent(MainActivity.this,AddFifiLaws.class));
         }else if (id == R.id.nav_share) {
              try {
                  Intent shareIntent = new Intent(Intent.ACTION_SEND);

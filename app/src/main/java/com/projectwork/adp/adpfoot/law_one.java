@@ -68,13 +68,14 @@ private FloatingActionButton fab2;
 fab2.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
-        Intent intent = new Intent(law_one.this,CHK.class);
+        Intent intent = new Intent(law_one.this,UpdateFifaLaws.class);
         intent.putExtra("title",title);
         intent.putExtra("sub_title",sub_title);
         intent.putExtra("video",video);
         intent.putExtra("image",image);
         intent.putExtra("details",details);
         startActivity(intent);
+        finish();
     }
 });
 
