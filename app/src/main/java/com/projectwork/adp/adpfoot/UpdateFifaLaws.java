@@ -39,8 +39,8 @@ public class UpdateFifaLaws extends AppCompatActivity implements View.OnClickLis
     public static String markerString;
     public ProgressDialog mProgressDialog;
     private Button btnLawImage, Submit, delete;
-    private EditText title, subtitle, video, details, audio;
-    private String mtitle, msub_title, mvideo, mdetails, mimage;
+    private EditText title, subtitle, video, details, audio, law_no;
+    private String mtitle, msub_title, mvideo, mdetails, mimage,mlaw_no;
     private ImageView lawImage;
     private FirebaseDatabase mfirebaseDatabase;
     private DatabaseReference mref;
@@ -73,6 +73,7 @@ public class UpdateFifaLaws extends AppCompatActivity implements View.OnClickLis
         subtitle = findViewById(R.id.sub_title);
         video = findViewById(R.id.video);
         details = findViewById(R.id.details);
+        law_no = findViewById(R.id.law_no);
         audio = findViewById(R.id.audio);
 
         lawImage = findViewById(R.id.lawImgView);
@@ -90,6 +91,7 @@ public class UpdateFifaLaws extends AppCompatActivity implements View.OnClickLis
            // lawImage.setTe getIntent().getStringExtra("image");
             video.setText(getIntent().getStringExtra("video"));
             details.setText(getIntent().getStringExtra("details"));
+            law_no.setText(getIntent().getStringExtra("law_no"));
 
 
             GlideApp.with(UpdateFifaLaws.this)
@@ -138,7 +140,9 @@ public class UpdateFifaLaws extends AppCompatActivity implements View.OnClickLis
                         resultUri.toString(),
                         "",
                         video.getText().toString(),
-                        details.getText().toString()
+                        details.getText().toString(),
+                        Integer.valueOf( law_no.getText().toString())
+
                 );
                     GlideApp.with(UpdateFifaLaws.this)
                             .load(getIntent().getStringExtra("image"))
@@ -174,7 +178,9 @@ public class UpdateFifaLaws extends AppCompatActivity implements View.OnClickLis
                                             uri.toString(),
                                             "",
                                             video.getText().toString(),
-                                            details.getText().toString()
+                                            details.getText().toString(),
+                                            Integer.valueOf( law_no.getText().toString())
+
                                     );
                                     mref.child("ADP").child("laws").child(title.getText().toString()).setValue(dbUser);
                                     onBackPressed();
@@ -195,7 +201,6 @@ public class UpdateFifaLaws extends AppCompatActivity implements View.OnClickLis
 
                                 }
                             });
-
                 }
 
 
@@ -258,13 +263,11 @@ public class UpdateFifaLaws extends AppCompatActivity implements View.OnClickLis
 
     }
 
-
     private void requestPermission() {
         String[] permissions = new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.INTERNET, Manifest.permission.CAMERA};
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
             requestPermissions(permissions, PERMS_REQUEST_CODE);
     }
-
     boolean NoPermissions() {
         int res = 0;
         String[] permissions = new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.INTERNET, Manifest.permission.CAMERA};

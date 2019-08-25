@@ -74,7 +74,15 @@
                     android:inputType="textCapSentences|textPersonName"
                     android:maxLines="1"
                     android:singleLine="true" />
-
+                <EditText
+                    android:id="@+id/law_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="10dp"
+                    android:hint="Law Number"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:singleLine="true" />
                 <EditText
                     android:id="@+id/video"
                     android:layout_width="match_parent"

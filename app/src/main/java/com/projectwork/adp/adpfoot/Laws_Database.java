@@ -7,6 +7,7 @@ class Laws_Database  {
     String audio;
     String video;
     String detail;
+    int law_no;
 
     public Laws_Database() {
     }
@@ -59,12 +60,22 @@ class Laws_Database  {
         this.detail = detail;
     }
 
-    public Laws_Database(String title, String sub_title, String img, String audio, String video, String detail) {
+    public Integer getLaw_no() {
+        return law_no;
+    }
+
+    public void setLaw_no(Integer law_no) {
+        this.law_no = law_no;
+    }
+
+
+    public Laws_Database(String title, String sub_title, String img, String audio, String video, String detail, Integer law_no) {
         this.title = title;
         this.sub_title = sub_title;
         this.img = img;
         this.audio = audio;
         this.video = video;
         this.detail = detail;
+        this.law_no = law_no;
     }
 }

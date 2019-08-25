@@ -35,7 +35,7 @@ public class law_one extends AppCompatActivity implements BaseSliderView.OnSlide
     private TextView texttoplay,tv_details;
     private TextToSpeech tts;
     LinearLayout btnSpeak;
-    private String title,image,details;
+    private String title,image,details,law_no;
     private String urL,sub_title;
     private String video;
     private ImageView text;
@@ -53,6 +53,7 @@ private FloatingActionButton fab2;
             image = getIntent().getStringExtra("image");
             video = getIntent().getStringExtra("video");
             details = getIntent().getStringExtra("details");
+            law_no = getIntent().getStringExtra("law_no");
 
         }
 
@@ -74,6 +75,7 @@ fab2.setOnClickListener(new View.OnClickListener() {
         intent.putExtra("video",video);
         intent.putExtra("image",image);
         intent.putExtra("details",details);
+        intent.putExtra("law_no",law_no);
         startActivity(intent);
         finish();
     }

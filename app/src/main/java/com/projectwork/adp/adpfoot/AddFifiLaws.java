@@ -41,8 +41,8 @@ public class AddFifiLaws extends AppCompatActivity implements View.OnClickListen
     public static String markerString;
     public ProgressDialog mProgressDialog;
     private Button btnLawImage, Submit, btn_audio;
-    private EditText title, subtitle, video, details, audio;
-    private String mtitle, msub_title, mvideo, mdetails, mimage;
+    private EditText title, subtitle, video, details, audio ,law_no;
+    private String mtitle, msub_title, mvideo, mdetails, mimage,mlaw_no;
     private ImageView lawImage;
     private FirebaseDatabase mfirebaseDatabase;
     private DatabaseReference mref;
@@ -76,6 +76,7 @@ public class AddFifiLaws extends AppCompatActivity implements View.OnClickListen
         subtitle = findViewById(R.id.sub_title);
         video = findViewById(R.id.video);
         details = findViewById(R.id.details);
+        law_no = findViewById(R.id.law_no);
         audio = findViewById(R.id.audio);
 
         lawImage = findViewById(R.id.lawImgView);
@@ -92,11 +93,13 @@ public class AddFifiLaws extends AppCompatActivity implements View.OnClickListen
             mimage = getIntent().getStringExtra("image");
             mvideo = getIntent().getStringExtra("video");
             mdetails = getIntent().getStringExtra("details");
+            mlaw_no = getIntent().getStringExtra("law_no");
 
             title.setText(mtitle);
             subtitle.setText(msub_title);
             video.setText(mvideo);
             details.setText(mdetails);
+            law_no.setText(mlaw_no);
 
 
             GlideApp.with(lawImage)
@@ -136,7 +139,6 @@ public class AddFifiLaws extends AppCompatActivity implements View.OnClickListen
                 }
                 showProgressDialog();
 
-
                 final StorageReference filePath = lawImages.child(title.getText().toString()).child(df.toString() + ".jpg");
                 storageTask = filePath.putFile(resultUri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                     @Override
@@ -150,7 +152,8 @@ public class AddFifiLaws extends AppCompatActivity implements View.OnClickListen
                                         uri.toString(),
                                         "",
                                         video.getText().toString(),
-                                        details.getText().toString()
+                                        details.getText().toString(),
+                                        Integer.valueOf( law_no.getText().toString())
                                 );
                                 mref.child("ADP").child("laws").child(title.getText().toString()).setValue(dbUser);
                                 onBackPressed();

@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity
                 mProgress.setVisibility(View.VISIBLE);
             }
             public void onFinish(){
-                mref.child("ADP").child("laws").
+                mref.child("ADP").child("laws").orderByChild("law_no").
                         addValueEventListener(new ValueEventListener() {
                             @Override
                             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -135,8 +135,9 @@ public class MainActivity extends AppCompatActivity
             userDatabase.setImg((ds.getValue(Laws_Database.class)).getImg());
             userDatabase.setAudio((ds.getValue(Laws_Database.class)).getAudio());
             userDatabase.setVideo((ds.getValue(Laws_Database.class)).getVideo());
+            userDatabase.setLaw_no((ds.getValue(Laws_Database.class)).getLaw_no());
 
-            mData.add(new Laws_Database(userDatabase.getTitle(), userDatabase.getSub_title(),userDatabase.getImg(),userDatabase.getAudio(),userDatabase.getVideo(),userDatabase.getDetail()));
+            mData.add(new Laws_Database(userDatabase.getTitle(), userDatabase.getSub_title(),userDatabase.getImg(),userDatabase.getAudio(),userDatabase.getVideo(),userDatabase.getDetail(),userDatabase.getLaw_no()));
 
         }
 

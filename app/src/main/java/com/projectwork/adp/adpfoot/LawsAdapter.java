@@ -106,6 +106,7 @@ class LawsAdapter extends RecyclerView.Adapter<LawsAdapter.ChildViewHolder> {
             intent.putExtra("video",mCurrentChild.getVideo());
             intent.putExtra("image",mCurrentChild.getImg());
             intent.putExtra("details",mCurrentChild.getDetail());
+            intent.putExtra("law_no",mCurrentChild.getLaw_no());
             mContext.startActivity(intent);
 
         }
