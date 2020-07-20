@@ -29,14 +29,13 @@ public class YoutubeVideo extends YouTubeBaseActivity {
             @Override
             public void onClick(View view) {
 
-                        youTubePlayerView.initialize("AIzaSyA9NeShibC_B41gDh5yOA0dMTItvL5_M1M", onInitializedListener);
+                        youTubePlayerView.initialize("", onInitializedListener);
 
             }
         });
 
         youTubePlayerView =  findViewById(R.id.youtube_view);
 
-        //youTubePlayerView.initialize("AIzaSyAauEvsvCI3bxEDGEkE6Gw90AvpqB6YFRQ",onInitializedListener);
 
 
         onInitializedListener = new YouTubePlayer.OnInitializedListener() {
